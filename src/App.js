@@ -6,6 +6,7 @@ import "./styles/App.css";
 import Header from "./components/header/header";
 import Home from "./pages/home/home";
 import MovieList from "./components/movieList/movieList";
+import MovieDetail from "./pages/movieDetail/movieDetail";
 
 function App() {
   return (
@@ -14,7 +15,7 @@ function App() {
       <Header/>
       <Routes>
         <Route index element={<Home/>}/>
-        <Route path="movie/:id" element={<h1>Movie detail page</h1>}/>
+        <Route path="movie/:id" element={<MovieDetail/>}/>
         <Route path="movies/:type" element={<MovieList/>}/>
         <Route path="/*" element={<h1>Error Page</h1>}/>
       </Routes>

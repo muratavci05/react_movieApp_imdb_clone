@@ -20,7 +20,7 @@
     align-items: flex-start;
     background-image: linear-gradient(rgb(0,0,0,0), rgb(0,0,0,1));
     opacity: 1;
-    transition: opacity 0.5s;
+    transition: opacity 0.3s;
 }
 
 .posterImage__overlay:hover {
