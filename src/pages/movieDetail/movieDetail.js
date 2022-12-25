@@ -23,7 +23,7 @@ const MovieDetail = () => {
     <div className="movie">
       <div className="movie__intro">
         <img
-          className="movie_backdrop"
+          className="movie__backdrop"
           src={`https://image.tmdb.org/t/p/original${
             currentMovieDetail ? currentMovieDetail.backdrop_path : ""
           }`}
@@ -35,7 +35,7 @@ const MovieDetail = () => {
             <img
               className="movie__poster"
               src={`https://image.tmdb.org/t/p/original${
-                currentMovieDetail ? currentMovieDetail.backdrop_path : ""
+                currentMovieDetail ? currentMovieDetail.poster_path : ""
               }`}
             />
           </div>
@@ -49,8 +49,8 @@ const MovieDetail = () => {
               {currentMovieDetail ? currentMovieDetail.tagline : ""}
             </div>
             <div className="movie__rating">
-              {currentMovieDetail ? currentMovieDetail.vote_average : ""}
-              <i className="fas fa-star" />
+              {currentMovieDetail ? currentMovieDetail.vote_average : ""}{" "}
+              <i class="fas fa-star" />
               <span className="movie__voteCount">
                 {currentMovieDetail
                   ? "(" + currentMovieDetail.vote_count + ") votes"
@@ -92,15 +92,27 @@ const MovieDetail = () => {
             style={{ textDecoration: "none" }}
           >
             <p>
+              <span className="movie__homeButton movie__Button">
+                Homepage <i className="newTab fas fa-external-link-alt"></i>
+              </span>
+            </p>
+          </a>
+        )}
+        {currentMovieDetail && currentMovieDetail.imdb_id && (
+          <a
+            href={"https://www.imdb.com/title/" + currentMovieDetail.imdb_id}
+            target="_blank"
+            style={{ textDecoration: "none" }}
+          >
+            <p>
               <span className="movie__imdbButton movie__Button">
-                IMDb
-                <i className="newTab fas fa-external-link-alt" />
+                IMDb<i className="newTab fas fa-external-link-alt"></i>
               </span>
             </p>
           </a>
         )}
       </div>
-      <div className="movie__heading">Production Companies</div>
+      <div className="movie__heading">Production companies</div>
       <div className="movie__production">
         {currentMovieDetail &&
           currentMovieDetail.production_companies &&
@@ -109,7 +121,7 @@ const MovieDetail = () => {
               {company.logo_path && (
                 <span className="productionCompanyImage">
                   <img
-                    className="movie_productionComapany"
+                    className="movie__productionComapany"
                     src={
                       "https://image.tmdb.org/t/p/original" + company.logo_path
                     }
