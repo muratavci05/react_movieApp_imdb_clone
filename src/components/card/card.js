@@ -4,6 +4,7 @@ import "./card.css";
 import { Link } from "react-router-dom";
 
 const Cards = ({ movie }) => {
+
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
@@ -33,10 +34,10 @@ const Cards = ({ movie }) => {
               }`}
             />
             <div className="cards__overlay">
-              <div className="cards__title">
+              <div className="card__title">
                 {movie ? movie.original_title : ""}
               </div>
-              <div className="cards__runtime">
+              <div className="card__runtime">
                 {movie ? movie.release_date : ""}
                 <span className="card__rating">
                   {movie ? movie.vote_average : ""}

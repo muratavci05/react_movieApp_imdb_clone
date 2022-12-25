@@ -13,7 +13,7 @@
 }
 
 .cards:hover {
-  transform: scale(1, 2);
+  transform: scale(1.2);
   z-index: 1000;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
     rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
