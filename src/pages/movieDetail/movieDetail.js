@@ -62,7 +62,7 @@ const MovieDetail = () => {
             </div>
             <div className="movie__releaseDate">
               {currentMovieDetail
-                ? "Release date: " + currentMovieDetail.release.date
+                ? "Release date: " + currentMovieDetail.release_date
                 : ""}
             </div>
             <div className="movie__genres">
