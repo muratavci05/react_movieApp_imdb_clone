@@ -1,0 +1,28 @@
+.footer {
+    margin: 0 2.5rem;
+    padding: 0.5rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.footerLeft{
+    display: flex;
+    align-items: center;
+}
+
+.footer__icon {
+    width: 80px;
+    cursor: pointer;
+}
+.footer__titles{
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.8rem;
+    color: rgba(192, 186, 186, 0.633);
+    margin-right: 19rem;
+    margin-top: 20px;
+}
+.footer_titleP > span {
+    color: rgb(208, 180, 180);
+}

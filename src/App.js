@@ -7,6 +7,7 @@ import Header from "./components/header/header";
 import Home from "./pages/home/home";
 import MovieList from "./components/movieList/movieList";
 import MovieDetail from "./pages/movieDetail/movieDetail";
+import Footer from "./components/footer/footer";
 
 function App() {
   return (
@@ -19,6 +20,8 @@ function App() {
         <Route path="movies/:type" element={<MovieList/>}/>
         <Route path="/*" element={<h1>Error Page</h1>}/>
       </Routes>
+      <Footer/>
+      <br/>
       </BrowserRouter>
     </div>
   );
